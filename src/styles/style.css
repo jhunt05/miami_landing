@@ -123,10 +123,6 @@ strong {
   position: relative;
 }
 
-.heading {
-  width: auto;
-}
-
 .section__heading {
   font-size: 48px;
   text-transform: uppercase;
@@ -148,7 +144,7 @@ strong {
   bottom: 0;
   height: 50px;
   justify-content: center;
-  top: 30px;
+  top: 20px;
 }
 .section__line {
   width: 75px;
@@ -227,47 +223,16 @@ strong {
 }
 
 /* Consultation */
-.consult__heading {
+.section_consultation {
   position: relative;
 }
 
-.section__consult_heading {
-  font-size: 48px;
-  text-transform: uppercase;
-  line-height: 48px;
-  font-weight: 300;
-  text-align: center;
-  height: 48px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: -220px;
-}
-
-.section__consult_underline {
-  display: flex;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 50px;
-  justify-content: center;
-  top: -120px;
-}
-
 .section__consult_line {
-  width: 140px;
+  width: 144px;
   height: 2px;
   background-color: #00ace9;
   margin: 8px 9px;
   border: none;
-}
-
-.section__consult_icon {
-  width: 23px;
-  height: 16px;
-  padding-top: 5px;
 }
 
 .consultation {
@@ -324,35 +289,7 @@ strong {
 /* Testimonials */
 .section_testimonials {
   background: #eee;
-}
-
-.testimonials__heading {
   position: relative;
-}
-
-.section__testimonials_heading {
-  font-size: 48px;
-  text-transform: uppercase;
-  line-height: 48px;
-  font-weight: 300;
-  text-align: center;
-  height: 48px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: -220px;
-}
-
-.section__testimonials_underline {
-  display: flex;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 50px;
-  justify-content: center;
-  top: -120px;
 }
 
 .section__testimonials_line {
@@ -363,16 +300,11 @@ strong {
   width: 135px;
 }
 
-.section__testimonials_icon {
-  width: 23px;
-  height: 16px;
-  padding-top: 5px;
-}
-
 .testimonials {
   display: flex;
   width: max-content;
   position: relative;
+  margin: 0 auto;
 }
 .testimonials__photo {
   width: 150px;
@@ -386,23 +318,29 @@ strong {
   align-items: center;
   padding: 0 70px;
 }
+.testimonials__person-1 {
+  padding-left: 0;
+}
+.testimonials__person-3 {
+  padding-right: 0;
+}
 .testimonials__names {
   text-align: center;
   font-size: 16px;
 }
 .testimonials__quote {
   position: absolute;
-  left: 50px;
+  left: -15px;
   top: 200px;
 }
 .testimonials__quote-1 {
   position: absolute;
-  left: 380px;
+  left: 315px;
   top: 200px;
 }
 .testimonials__quote-2 {
   position: absolute;
-  right: 260px;
+  right: 185px;
   top: 200px;
 }
 .testimonials__message {
@@ -420,33 +358,8 @@ strong {
 }
 
 /* Contacts */
-.contacts__heading {
+.section_contacts {
   position: relative;
-}
-
-.section__contacts_heading {
-  font-size: 48px;
-  text-transform: uppercase;
-  line-height: 48px;
-  font-weight: 300;
-  text-align: center;
-  height: 48px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: -230px;
-}
-
-.section__contacts_underline {
-  display: flex;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 50px;
-  justify-content: center;
-  top: -135px;
 }
 
 .section__contacts_line {
@@ -454,13 +367,7 @@ strong {
   background-color: #00ace9;
   margin: 8px 9px;
   border: none;
-  width: 123px;
-}
-
-.section__contacts_icon {
-  width: 23px;
-  height: 16px;
-  padding-top: 5px;
+  width: 115px;
 }
 
 .contacts {
@@ -585,14 +492,6 @@ strong {
     margin-bottom: 80px;
   }
 
-  .section__consult_heading {
-    top: -85px;
-  }
-
-  .section__consult_underline {
-    top: 10px;
-  }
-
   .consultation {
     margin-bottom: 40px;
     flex-direction: column;
@@ -604,42 +503,40 @@ strong {
   }
   .consultation__text {
     text-align: center;
+    max-width: 85%;
+    margin: 0 auto;
   }
   .consultation__form {
     margin: 50px 0 30px;
-  }
-
-  .section__testimonials_heading {
-    top: -85px;
-  }
-
-  .section__testimonials_underline {
-    top: 5px;
   }
 
   .testimonials {
     margin: 60px auto;
     flex-direction: column;
   }
+  .testimonials__person-1, .testimonials__person-2, .testimonials__person-3 {
+    padding-bottom: 20px;
+  }
+  .testimonials__person-1 {
+    padding-left: 70px;
+  }
+  .testimonials__person-3 {
+    padding-right: 70px;
+  }
+  .testimonials__quote {
+    left: 45px;
+  }
   .testimonials__quote-1 {
-    top: 515px;
-    left: 40px;
+    top: 530px;
+    left: 45px;
   }
   .testimonials__quote-2 {
-    top: 925px;
-    left: 50px;
-  }
-
-  .section__contacts_heading {
-    top: -85px;
-  }
-
-  .section__contacts_underline {
-    top: 5px;
+    top: 960px;
+    left: 55px;
   }
 
   .section_contacts {
-    height: 500px;
+    max-height: 520px;
   }
 
   .contacts {
@@ -649,6 +546,7 @@ strong {
   }
   .contacts__info {
     margin-bottom: 30px;
+    text-align: center;
   }
 
   .footer {
