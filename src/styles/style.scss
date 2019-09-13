@@ -364,7 +364,7 @@ $dark-bg-color: #eee;
     margin-bottom: 10px;
     border: none;
     font-size: 14px;
-    padding: 5px;
+    padding-left: 5px;
 
     &::placeholder {
       text-align: center;
@@ -375,7 +375,7 @@ $dark-bg-color: #eee;
   }
 
   &__btn {
-    width: 383px;
+    width: 389px;
     height: 54px;
     background-color: $main-color;
     color: #fff;
