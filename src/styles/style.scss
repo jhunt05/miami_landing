@@ -166,7 +166,7 @@ $dark-bg-color: #eee;
   }
 }
 
-.blue-word {
+.highlight-word {
   color: $main-color;
 }
 
@@ -332,6 +332,7 @@ $dark-bg-color: #eee;
     line-height: 40px;
     font-weight: 300;
     margin: 0 0 24px 0;
+    width: max-content;
   }
 
   &__text {
@@ -355,7 +356,6 @@ $dark-bg-color: #eee;
     margin-bottom: 10px;
     border: none;
     font-size: 14px;
-    padding-left: 5px;
 
     &::placeholder {
       text-align: center;
@@ -366,7 +366,7 @@ $dark-bg-color: #eee;
   }
 
   &__btn {
-    width: 389px;
+    width: 383px;
     height: 54px;
     background-color: $main-color;
     color: #fff;
@@ -413,13 +413,8 @@ $dark-bg-color: #eee;
 
 .testimonials {
   display: flex;
-  flex-direction: column;
-
-  &__people {
-    display: flex;
-    height: 220px;
-    padding-left: 150px;
-  }
+  width: max-content;
+  position: relative;
 
   &__photo {
     width: 150px;
@@ -434,41 +429,47 @@ $dark-bg-color: #eee;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 115px;
+    padding: 0 70px;
+    
   }
 
   &__names {
     text-align: center;
     font-size: 16px;
+  } 
+
+  &__quote {
+    position: absolute;
+    left: 50px;
+    top: 200px;
   }
 
-  &__quotes {
-    display: flex;
-    text-align: center;
-    margin-bottom: 100px;
+  &__quote-1 {
+    position: absolute;
+    left: 380px;
+    top: 200px;
   }
 
-  &__text {
-    margin-top: -30px;
-    width: 900px;
-    height: 30px;
-    display: flex;
-    font-size: 16px;
-    line-height: 24px;
-    padding-left: 90px;
-    font-weight: 300;
-  }  
+  &__quote-2 {
+    position: absolute;
+    right: 260px;
+    top: 200px;
+  }
 
   &__message {
-    padding: 10px 20px 0 10px;
     width: 200px;
-  }
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;
+  }  
+
 }
 
 .job {
   font-style: italic;
   color: #696972;
-  padding-top: 5px;
+  padding: 5px 0 7px 0;
 }
 
 
@@ -578,7 +579,7 @@ $dark-bg-color: #eee;
 
 /* Media */
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 999px) {  
   .menu__list {
     flex-direction: column;
     align-items: center;
@@ -618,6 +619,19 @@ $dark-bg-color: #eee;
 
   .gallery {
     height: auto;
+    align-items: center;
+    
+    &__first-row,
+    &__second-row,
+    &__third-row {
+      flex-direction: column;
+
+      & img {
+        width: 350px;
+        height: auto;
+        margin-bottom: 15px;
+      }
+    }
 
     &__btn {
       margin: 25px 0 70px;
@@ -642,9 +656,20 @@ $dark-bg-color: #eee;
   
   .consultation {
     margin-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    
+    &__heading {
+      text-align: center;
+      padding-left: 80px;
+    }
+
+    &__text {
+      text-align: center;
+    }
 
     &__form {
-      margin-left: 62px;
+      margin: 50px 0 30px;
     }
   }
 
@@ -656,12 +681,19 @@ $dark-bg-color: #eee;
     top: 5px;
   }
 
-  .section_testimonials {
-    height: 500px;
-  }
-
   .testimonials {
-    margin-top: 60px;
+    margin: 60px auto;
+    flex-direction: column;
+
+    &__quote-1 {
+      top: 515px;
+      left: 40px;
+    }
+
+    &__quote-2 {
+      top: 925px;
+      left: 50px;
+    }
   }
 
   .section__contacts_heading {
@@ -678,5 +710,15 @@ $dark-bg-color: #eee;
 
   .contacts {
     margin-top: 70px;
+    flex-direction: column;
+    align-items: center;
+
+    &__info {
+      margin-bottom: 30px;
+    }
+  }
+
+  .footer {
+    margin-top: 250px;
   }
 }
