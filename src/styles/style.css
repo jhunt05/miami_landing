@@ -310,6 +310,7 @@ strong {
   margin-bottom: 10px;
   border: none;
   font-size: 14px;
+  padding: 5px;
 }
 .consultation__input::placeholder {
   text-align: center;
