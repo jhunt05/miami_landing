@@ -406,6 +406,7 @@ strong {
   margin-bottom: 8px;
   width: 372px;
   height: 166px;
+  resize: none;
 }
 .contacts__btn {
   background: #2F80ED;
