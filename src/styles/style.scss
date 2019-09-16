@@ -7,7 +7,6 @@
   border: none;
 }
 
-
 $logo-width: 115px;
 $logo-height: 76px;
 $hover-color: #D5C5AA;
@@ -506,7 +505,6 @@ $dark-bg-color: #eee;
   }
 }
 
-
 /* Media */
 
 @media screen and (max-width: 999px) {  
@@ -633,5 +631,78 @@ $dark-bg-color: #eee;
 
   .footer {
     margin-top: 250px;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .section__heading {
+    font-size: 25px;
+    top: -45px;
+    left: 10px;
+  }
+
+  .section__underline {
+    width: 60%;
+    left: 22%;
+    top: 10px;
+  }
+
+  .gallery {
+    &__first-row,
+    &__second-row,
+    &__third-row {
+      & img {
+        width: 300px;
+        height: 150px;
+        margin: 0 auto 15px;
+      }
+    }
+  }
+
+  .consultation {
+    margin-top: 10px;
+
+      &__heading {
+      font-size: 28px;
+      padding-left: 0; 
+    }
+
+    &__text {
+      max-width: 250px;
+    } 
+
+    &__form {
+  
+    }
+
+    &__input, 
+    &__btn {
+      width: 280px;
+    }
+  }
+
+  .testimonials {
+    &__person-1,
+    &__person-2,
+    &__person-3 {
+      padding: 0 0 20px;
+    }
+  }
+
+  .contacts {
+
+    &__form {
+      width: 290px;
+         
+    }
+    
+    &__input,
+    &__textarea {
+      width: 280px;
+    }
+
+    &__btn {
+      width: 290px;
+    }
   }
 }

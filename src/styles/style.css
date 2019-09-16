@@ -542,5 +542,52 @@ strong {
     margin-top: 250px;
   }
 }
+@media screen and (max-width: 399px) {
+  .section__heading {
+    font-size: 25px;
+    top: -45px;
+    left: 10px;
+  }
+
+  .section__underline {
+    width: 60%;
+    left: 22%;
+    top: 10px;
+  }
+
+  .gallery__first-row img, .gallery__second-row img, .gallery__third-row img {
+    width: 300px;
+    height: 150px;
+    margin: 0 auto 15px;
+  }
+
+  .consultation {
+    margin-top: 10px;
+  }
+  .consultation__heading {
+    font-size: 28px;
+    padding-left: 0;
+  }
+  .consultation__text {
+    max-width: 250px;
+  }
+  .consultation__input, .consultation__btn {
+    width: 280px;
+  }
+
+  .testimonials__person-1, .testimonials__person-2, .testimonials__person-3 {
+    padding: 0 0 20px;
+  }
+
+  .contacts__form {
+    width: 290px;
+  }
+  .contacts__input, .contacts__textarea {
+    width: 280px;
+  }
+  .contacts__btn {
+    width: 290px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
