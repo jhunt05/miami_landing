@@ -374,6 +374,7 @@ $dark-bg-color: #eee;
     flex-direction: column;
     align-items: center;
     padding: 0 70px;
+    position: relative;
   }
 
   &__person-1 {
@@ -389,38 +390,33 @@ $dark-bg-color: #eee;
     font-size: 16px;
   } 
 
-  &__quote {
-    position: absolute;
-    left: -15px;
-    top: 200px;
-  }
-
-  &__quote-1 {
-    position: absolute;
-    left: 315px;
-    top: 200px;
-  }
-
-  &__quote-2 {
-    position: absolute;
-    right: 185px;
-    top: 200px;
-  }
-
   &__message {
     width: 200px;
     font-size: 16px;
     line-height: 24px;
     font-weight: 300;
     text-align: center;
-  }  
+    position: relative;
 
+    &::before {
+      content: "";
+      display: block;
+      background: url(../images/quote.png) no-repeat;
+      position: absolute;
+      top: -28px;
+      left: -20px;
+      width: 43px;
+      height: 43px;
+    }  
+  }
 }
 
 .job {
   font-style: italic;
   color: #696972;
   padding: 5px 0 7px 0;
+  width: 150px;
+  text-align: center;
 }
 
 
@@ -562,7 +558,7 @@ $dark-bg-color: #eee;
 
       & img {
         width: 350px;
-        height: auto;
+        min-height: 250px;
         margin-bottom: 15px;
       }
     }
@@ -617,20 +613,6 @@ $dark-bg-color: #eee;
 
     &__person-3 {
       padding-right: 70px;
-    }
-
-    &__quote {
-      left: 45px;
-    }
-
-    &__quote-1 {
-      top: 530px;
-      left: 45px;
-    }
-
-    &__quote-2 {
-      top: 960px;
-      left: 55px;
     }
   }
 

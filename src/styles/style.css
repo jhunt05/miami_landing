@@ -317,6 +317,7 @@ strong {
   flex-direction: column;
   align-items: center;
   padding: 0 70px;
+  position: relative;
 }
 .testimonials__person-1 {
   padding-left: 0;
@@ -328,33 +329,31 @@ strong {
   text-align: center;
   font-size: 16px;
 }
-.testimonials__quote {
-  position: absolute;
-  left: -15px;
-  top: 200px;
-}
-.testimonials__quote-1 {
-  position: absolute;
-  left: 315px;
-  top: 200px;
-}
-.testimonials__quote-2 {
-  position: absolute;
-  right: 185px;
-  top: 200px;
-}
 .testimonials__message {
   width: 200px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 300;
   text-align: center;
+  position: relative;
+}
+.testimonials__message::before {
+  content: "";
+  display: block;
+  background: url(../images/quote.png) no-repeat;
+  position: absolute;
+  top: -28px;
+  left: -20px;
+  width: 43px;
+  height: 43px;
 }
 
 .job {
   font-style: italic;
   color: #696972;
   padding: 5px 0 7px 0;
+  width: 150px;
+  text-align: center;
 }
 
 /* Contacts */
@@ -478,7 +477,7 @@ strong {
   }
   .gallery__first-row img, .gallery__second-row img, .gallery__third-row img {
     width: 350px;
-    height: auto;
+    min-height: 250px;
     margin-bottom: 15px;
   }
   .gallery__btn {
@@ -523,17 +522,6 @@ strong {
   }
   .testimonials__person-3 {
     padding-right: 70px;
-  }
-  .testimonials__quote {
-    left: 45px;
-  }
-  .testimonials__quote-1 {
-    top: 530px;
-    left: 45px;
-  }
-  .testimonials__quote-2 {
-    top: 960px;
-    left: 55px;
   }
 
   .section_contacts {
