@@ -571,8 +571,11 @@ strong {
   .consultation__text {
     max-width: 250px;
   }
-  .consultation__input, .consultation__btn {
+  .consultation__input {
     width: 280px;
+  }
+  .consultation__btn {
+    width: 285px;
   }
 
   .testimonials__person-1, .testimonials__person-2, .testimonials__person-3 {
@@ -584,6 +587,9 @@ strong {
   }
   .contacts__input, .contacts__textarea {
     width: 280px;
+  }
+  .contacts__input::placeholder, .contacts__textarea::placeholder {
+    padding-top: 5px;
   }
   .contacts__btn {
     width: 290px;
