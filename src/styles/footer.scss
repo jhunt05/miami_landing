@@ -1,0 +1,17 @@
+@import "variables";
+
+.footer {
+  height: 540px;
+  background: url(../images/footer.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &__logo {
+    position: absolute;
+    bottom: 95px;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+}

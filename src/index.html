@@ -6,20 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Miami</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="./libraries/animate css/animate.css">
   <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=GFS+Didot&display=swap" rel="stylesheet">
+  <script src="./libraries/wow/dist/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </head>
 <body>
   <header class="header"> 
-    <div class="header__container">
+    <div class="header__container wow fadeIn" data-wow-duration="1.5s">
         <img src="./images/logo.png" class="logo header__logo">
         <span class="header__number">+1 234 555-55-55</span>
         <a href="tel:+1 234 555-55-55" class="header__link">Call to order</a>
     </div>
-    <nav class="menu header__menu">
+    <nav class="menu header__menu wow fadeInUp">
       <ul class="menu__list">
-        <li class="menu__item menu__item_active">Home</li>
+        <li class="menu__item menu__item_active"><a class="menu__link" href="#">Home</a></li>
         <li class="menu__item"><a href="#" class="menu__link">About us</a></li>
         <li class="menu__item"><a href="#" class="menu__link">Gallery</a></li>
         <li class="menu__item"><a href="#" class="menu__link">Consultation</a></li>
@@ -30,7 +35,7 @@
   </header>
   
   <main>
-    <section class="section section_about">
+    <section class="section section_about wow fadeInLeft" data-wow-duration="1.5s">
       <div class="info">
         <h1 class="info__heading">Miami <b>best</b> real estate <span class="highlight-word">here</span></h1>
         <div class="info__text">
@@ -58,7 +63,7 @@
           <hr class="section__line">
         </div>
       </div>
-      <div class="gallery">  
+      <div class="gallery wow fadeInLeft" data-wow-duration="1.5s">  
         <div class="gallery__first-row">
           <img class="gallery__photo-1" src="./images/vizcaya-1.jpeg" alt="Vizcaya">
           <img class="gallery__photo-2" src="./images/beach-1.jpeg" alt="Beach">
@@ -75,7 +80,7 @@
         </div>
         <span class="gallery__description">Faena House / <a href="#" class="gallery__link">Miami Beach, FL 33140</a></span>
       </div>
-      <div class="gallery__button">
+      <div class="gallery__button wow fadeInLeft" data-wow-duration="1.5s">
         <button class="gallery__btn">View all</button>
       </div>
     </section>
@@ -89,7 +94,7 @@
           <hr class="section__consult_line">
         </div>
       </div>
-      <div class="consultation">
+      <div class="consultation wow fadeInLeft" data-wow-duration="1.5s">
         <div class="consultation__description">
           <h3 class="consultation__heading">How long have  <br>you do yourself a gift?</h3>
           <p class="consultation__text">The procedural change mezzo forte starts izoritmichesky pickup at these moments stop LA Mazel and VA Tsukkerman in his "Analysis of musical works." Pointillism, which originated in the music of the early twentieth century, microforms, found a distant historical</p>
@@ -112,10 +117,10 @@
           <hr class="section__testimonials_line">
         </div>
       </div>
-      <div class="testimonials">
+      <div class="testimonials wow fadeInLeft" data-wow-duration="1.5s">
         <div class="testimonials__person-1">
           <img class="testimonials__photo" src="./images/person-1.jpeg" alt="Roman">
-          <span class="testimonials__names"><strong>Roman Apostol</strong><br></span>
+          <span class="testimonials__names"><strong>Jonathan Ive</strong><br></span>
           <span class="job">CEO, Co-founder</span>
           <p class="testimonials__message">  
              Nice work, Certificates National Association of Realtors (USA).
@@ -123,16 +128,16 @@
         </div>
          <div class="testimonials__person-2">
           <img class="testimonials__photo" src="./images/person-2.jpeg" alt="Anna">
-          <span class="testimonials__names"><strong>Anna Apostol</strong><br></span>
-          <span class="job">COO, Co-founder</span>
+          <span class="testimonials__names"><strong>Katherine Gontier</strong><br></span>
+          <span class="job"> Senior Vice President</span>
           <p class="testimonials__message">              
             My soul is illuminated by an unearthly joy, as these beautiful spring morning, which I enjoy with all my heart. I’m all alone and blissfully happy in the local edge.
           </p>
         </div>
         <div class="testimonials__person-3">
           <img class="testimonials__photo" src="./images/person-3.jpeg" alt="Max">
-          <span class="testimonials__names"><strong>Max Lysak</strong><br></span>
-          <span class="job">Co-founder, Growth</span>
+          <span class="testimonials__names"><strong>Tim Cook</strong><br></span>
+          <span class="job">Chief Design Officer</span>
           <p class="testimonials__message">
             When my lovely valley of steam rises and half-day sun is above an impermeable.
           </p>
@@ -149,7 +154,7 @@
             <hr class="section__contacts_line">
         </div>
       </div>
-      <div class="contacts">
+      <div class="contacts wow fadeInLeft" data-wow-duration="1.5s">
         <div class="contacts__info">
           <p class="contacts__points">Hello@miami.com<br>
             +1 234 555-55-55

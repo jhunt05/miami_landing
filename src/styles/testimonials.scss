@@ -1,0 +1,81 @@
+@import "variables";
+
+.section_testimonials {
+  background: $dark-bg-color;
+  position: relative;
+}
+
+.section__testimonials_line {
+  @include line();
+  width: 135px;
+}
+
+.testimonials {
+  display: flex;
+  width: max-content;
+  position: relative;
+  margin: 0 auto;
+
+  &__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+  }
+
+  &__person-1,
+  &__person-2,
+  &__person-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 70px;
+    position: relative;
+  }
+
+  &__person-1 {
+    padding-left: 0;
+  }
+
+  &__person-3 {
+    padding-right: 0;
+  }
+
+  &__names {
+    text-align: center;
+    font-size: 16px;
+  } 
+
+  &__message {
+    width: 200px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;
+    position: relative;
+    transition: transform 1s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      background: url(../images/quote.png) no-repeat;
+      position: absolute;
+      top: -28px;
+      left: -20px;
+      width: 43px;
+      height: 43px;
+    }  
+  }
+}
+
+.job {
+  font-style: italic;
+  color: #696972;
+  padding: 5px 0 7px 0;
+  width: 150px;
+  text-align: center;
+}

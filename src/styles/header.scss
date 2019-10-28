@@ -1,0 +1,98 @@
+@import "variables";
+
+.header {
+  height: 765px;
+  max-height: 100vh;
+  background: url('../images/header.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &__menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+  }
+  
+  &__container {
+  display: flex;
+  position: absolute;
+  top: 35px;
+  left: calc(50% - #{$logo-width}/2);
+  }
+  
+  &__number {
+  color: #fff;
+  margin: 0 82px;
+  text-decoration: none;
+  height: max-content;
+  }
+  
+  &__link {
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: none;
+  transition: color $hover;
+  border-bottom: 1px dashed #fff;
+  height: max-content;
+  padding-bottom: 3px;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+  &__number, 
+  &__link {
+    position: relative;
+    top: $logo-height * 0.62;
+    white-space: nowrap;
+  }
+}
+
+.logo {
+  width: $logo-width;
+  height: $logo-height;
+}
+
+.menu {
+  &__list {
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    text-transform: uppercase;
+    justify-content: center;
+  }
+
+  &__item {
+    margin: 0 23px;
+    padding: 7px 20px;
+
+    &_active {
+      background: $hover-color;
+      border-radius: 10px;
+    
+      & a {
+        color: #000;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      color: $hover-color;
+      transition: color $hover;
+    }
+  }
+}

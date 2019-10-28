@@ -1,0 +1,13 @@
+@mixin line {
+  height: 2px;
+  background-color: $main-color;
+  margin: 8px 9px;
+  border: none;
+}
+
+$logo-width: 115px;
+$logo-height: 76px;
+$hover-color: #D5C5AA;
+$hover: 0.2s;
+$main-color: #00ace9;
+$dark-bg-color: #eee;

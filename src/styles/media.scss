@@ -1,0 +1,202 @@
+@import "variables";
+
+@media screen and (max-width: 999px) {  
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header {
+    &__container {
+    flex-direction: column;
+    align-items: center;  
+    }
+
+    &__number {
+      margin: 20px 0 10px;
+    }
+
+    &__number, 
+    &__link {
+      top: 0;
+    }
+  }
+
+  .section {
+    padding: 20px 40px;
+  }
+
+  .info {
+    flex-direction: column;
+    margin-bottom: 60px;
+    text-align: center;
+    align-items: center;
+
+    &__heading {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  }
+
+  .gallery {
+    height: auto;
+    align-items: center;
+    
+    &__first-row,
+    &__second-row,
+    &__third-row {
+      flex-direction: column;
+
+      & img {
+        width: 350px;
+        min-height: 250px;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__btn {
+      margin: 25px 0 70px;
+    }
+  }
+
+  .heading {
+    margin-bottom: 55px;
+  }
+
+  .consult__heading {
+    margin-bottom: 80px;
+  }
+
+  .consultation {
+    margin-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    
+    &__heading {
+      text-align: center;
+      padding-left: 80px;
+    }
+
+    &__text {
+      text-align: center;
+      max-width: 85%;
+      margin: 0 auto;
+    }
+
+    &__form {
+      margin: 50px 0 30px;
+    }
+  }
+
+  .testimonials {
+    margin: 60px auto;
+    flex-direction: column;
+
+    &__person-1,
+    &__person-2,
+    &__person-3 {
+      padding-bottom: 20px;
+    }
+
+    &__person-1 {
+      padding-left: 70px; 
+    }
+
+    &__person-3 {
+      padding-right: 70px;
+    }
+  }
+
+  .section_contacts {
+    max-height: 520px;
+  }
+
+  .contacts {
+    margin-top: 70px;
+    flex-direction: column;
+    align-items: center;
+
+    &__info {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  .footer {
+    margin-top: 250px;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .section__heading {
+    font-size: 25px;
+    top: -45px;
+    left: 10px;
+  }
+
+  .section__underline {
+    width: 60%;
+    left: 22%;
+    top: 10px;
+  }
+
+  .gallery {
+    &__first-row,
+    &__second-row,
+    &__third-row {
+      & img {
+        width: 300px;
+        height: 150px;
+        margin: 0 auto 15px;
+      }
+    }
+  }
+
+  .consultation {
+    margin-top: 10px;
+
+      &__heading {
+      font-size: 28px;
+      padding-left: 0; 
+    }
+
+    &__text {
+      max-width: 250px;
+    } 
+
+    &__input {
+      width: 280px;
+    }
+
+    &__btn {
+      width: 285px;
+    }
+  }
+
+  .testimonials {
+    &__person-1,
+    &__person-2,
+    &__person-3 {
+      padding: 0 0 20px;
+    }
+  }
+
+  .contacts {
+    &__form {
+      width: 290px;
+    }
+    
+    &__input,
+    &__textarea {
+      width: 280px;
+
+      &::placeholder {
+        padding-top: 5px;
+      }
+    }
+
+    &__btn {
+      width: 290px;
+    }
+  }
+}

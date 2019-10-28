@@ -1,3 +1,7 @@
+* {
+  outline: none;
+}
+
 body {
   margin: 0;
   font-family: "Ubuntu", sans-serif;
@@ -7,7 +11,6 @@ strong {
   font-weight: 500;
 }
 
-/* Header */
 .header {
   height: 765px;
   max-height: 100vh;
@@ -75,6 +78,12 @@ strong {
   background: #D5C5AA;
   border-radius: 10px;
 }
+.menu__item_active a {
+  color: #000;
+}
+.menu__item_active a:hover {
+  color: #fff;
+}
 .menu__link {
   text-decoration: none;
   color: #fff;
@@ -84,7 +93,6 @@ strong {
   transition: color 0.2s;
 }
 
-/* Info */
 .section {
   padding: 156px calc(50% - 470px);
 }
@@ -117,7 +125,6 @@ strong {
   color: #00ace9;
 }
 
-/* Gallery */
 .section_gallery {
   background-color: #eee;
   position: relative;
@@ -176,6 +183,12 @@ strong {
 .gallery__third-row img {
   height: 260px;
 }
+.gallery__photo-1, .gallery__photo-2, .gallery__photo-3, .gallery__photo-4, .gallery__photo-5, .gallery__photo-6 {
+  transition: border-radius 1s;
+}
+.gallery__photo-1:hover, .gallery__photo-2:hover, .gallery__photo-3:hover, .gallery__photo-4:hover, .gallery__photo-5:hover, .gallery__photo-6:hover {
+  border-radius: 40px;
+}
 .gallery__photo-1 {
   width: 624px;
   margin-right: 16px;
@@ -219,10 +232,16 @@ strong {
   font-weight: 500;
   text-transform: uppercase;
   background-color: #00ace9;
+  border: 1px solid #00ace9;
   cursor: pointer;
+  transition: background-color 1s, color 1s;
+}
+.gallery__btn:hover {
+  border: 1px solid #00ace9;
+  background-color: #fff;
+  color: #00ace9;
 }
 
-/* Consultation */
 .section_consultation {
   position: relative;
 }
@@ -268,6 +287,8 @@ strong {
   margin-bottom: 10px;
   border: none;
   font-size: 14px;
+  padding-left: 10px;
+  border: 1px solid #eee;
 }
 .consultation__input::placeholder {
   text-align: center;
@@ -275,18 +296,30 @@ strong {
   color: #393939;
   text-transform: uppercase;
 }
+.consultation__input:focus {
+  border: 1px solid #00ace9;
+}
 .consultation__btn {
-  width: 383px;
+  width: 396px;
   height: 54px;
   background-color: #00ace9;
+  border: 1px solid #00ace9;
   color: #fff;
   text-transform: uppercase;
   font-size: 14px;
   border: none;
   cursor: pointer;
+  transition: background-color 1s, color 1s;
+}
+.consultation__btn:hover {
+  border: 1px solid #00ace9;
+  background-color: #fff;
+  color: #00ace9;
+}
+.consultation__btn:focus {
+  opacity: 0.7;
 }
 
-/* Testimonials */
 .section_testimonials {
   background: #eee;
   position: relative;
@@ -336,6 +369,10 @@ strong {
   font-weight: 300;
   text-align: center;
   position: relative;
+  transition: transform 1s;
+}
+.testimonials__message:hover {
+  transform: scale(1.1);
 }
 .testimonials__message::before {
   content: "";
@@ -356,7 +393,6 @@ strong {
   text-align: center;
 }
 
-/* Contacts */
 .section_contacts {
   position: relative;
 }
@@ -391,8 +427,9 @@ strong {
   margin-bottom: 7px;
   width: 372px;
   height: 54px;
-  padding: 5px;
+  padding-left: 10px;
   font-size: 14px;
+  border: 1px solid #eee;
 }
 .contacts__input::placeholder, .contacts__textarea::placeholder {
   text-align: center;
@@ -401,25 +438,38 @@ strong {
   font-weight: 500;
   text-transform: uppercase;
 }
+.contacts__input:focus, .contacts__textarea:focus {
+  border: 1px solid #00ace9;
+}
 .contacts__textarea {
   margin-bottom: 8px;
   width: 372px;
   height: 166px;
   resize: none;
+  padding-top: 10px;
 }
 .contacts__btn {
   background: #2F80ED;
+  border: 1px solid #2F80ED;
   border: none;
-  width: 382px;
+  width: 386px;
   height: 54px;
   color: #fff;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  transition: background-color 1s, color 1s;
+}
+.contacts__btn:hover {
+  border: 1px solid #2F80ED;
+  background-color: #fff;
+  color: #2F80ED;
+}
+.contacts__btn:focus {
+  opacity: 0.7;
 }
 
-/* Footer */
 .footer {
   height: 540px;
   background: url(../images/footer.jpeg);
@@ -435,7 +485,6 @@ strong {
   right: 0;
 }
 
-/* Media */
 @media screen and (max-width: 999px) {
   .menu__list {
     flex-direction: column;
