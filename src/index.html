@@ -25,17 +25,17 @@
     <nav class="menu header__menu wow fadeInUp">
       <ul class="menu__list">
         <li class="menu__item menu__item_active"><a class="menu__link" href="#">Home</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">About us</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Gallery</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Consultation</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Testimonials</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Contacts</a></li> 
+        <li class="menu__item"><a href="#about" class="menu__link">About us</a></li>
+        <li class="menu__item"><a href="#gallery" class="menu__link">Gallery</a></li>
+        <li class="menu__item"><a href="#consultation" class="menu__link">Consultation</a></li>
+        <li class="menu__item"><a href="#testimonials" class="menu__link">Testimonials</a></li>
+        <li class="menu__item"><a href="#contacts" class="menu__link">Contacts</a></li> 
       </ul>
     </nav> 
   </header>
   
   <main>
-    <section class="section section_about wow fadeInLeft" data-wow-duration="1.5s">
+    <section id="about" class="section section_about wow fadeInLeft" data-wow-duration="1.5s">
       <div class="info">
         <h1 class="info__heading">Miami <b>best</b> real estate <span class="highlight-word">here</span></h1>
         <div class="info__text">
@@ -54,7 +54,7 @@
       </div>
     </section>
 
-    <section class="section section_gallery">
+    <section id="gallery" class="section section_gallery">
       <div class="heading">
         <h2 class="section__heading">Gallery</h2>
         <div class="section__underline">
@@ -63,7 +63,7 @@
           <hr class="section__line">
         </div>
       </div>
-      <div class="gallery wow fadeInLeft" data-wow-duration="1.5s">  
+      <div class="gallery wow fadeIn" data-wow-duration="2s">  
         <div class="gallery__first-row">
           <img class="gallery__photo-1" src="./images/vizcaya-1.jpeg" alt="Vizcaya">
           <img class="gallery__photo-2" src="./images/beach-1.jpeg" alt="Beach">
@@ -80,12 +80,12 @@
         </div>
         <span class="gallery__description">Faena House / <a href="#" class="gallery__link">Miami Beach, FL 33140</a></span>
       </div>
-      <div class="gallery__button wow fadeInLeft" data-wow-duration="1.5s">
+      <div class="gallery__button wow fadeIn" data-wow-duration="1.5s">
         <button class="gallery__btn">View all</button>
       </div>
     </section>
 
-    <section class="section section_consultation">
+    <section id="consultation" class="section section_consultation">
       <div class="consult__heading">
         <h2 class="section__heading">Consultation</h2>
         <div class="section__underline">
@@ -108,7 +108,7 @@
       </div>
     </section>
 
-    <section class="section section_testimonials">
+    <section id="testimonials" class="section section_testimonials">
       <div class="testimonials__heading">
         <h2 class="section__heading">Testimonials</h2>
         <div class="section__underline">
@@ -145,7 +145,7 @@
       </div>
     </section>
 
-    <section class="section section_contacts">
+    <section id="contacts" class="section section_contacts">
       <div class="contacts__heading">
         <h2 class="section__heading">Contact us</h2>
         <div class="section__underline">
@@ -177,5 +177,36 @@
   <footer class="footer">
     <img src="./images/logo.png" alt="Miami" class="logo footer__logo">
   </footer>
+
+  <script>
+    let linkNav = document.querySelectorAll('[href^="#"]');
+    const V = 0.7;
+        
+    for (let i = 0; i < linkNav.length; i++) {
+      linkNav[i].addEventListener('click', function(e) { 
+        e.preventDefault();
+
+        let w = window.pageYOffset;
+        let hash = this.href.replace(/[^#]*(.*)/, '$1');  
+        let t = document.querySelector(hash).getBoundingClientRect().top;
+        let start = null;
+        requestAnimationFrame(step);
+
+        function step(time) {
+          if (start === null) start = time;
+          
+          let progress = time - start;
+          let r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
+          window.scrollTo(0,r);
+              
+          if (r != w + t) {
+            requestAnimationFrame(step)
+          } else {
+            location.hash = hash  
+            }
+          }
+      }, false);
+    }
+  </script>  
 </body>
 </html>
